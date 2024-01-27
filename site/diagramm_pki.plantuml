@@ -1,0 +1,24 @@
+@startuml
+!define ROOTCA class "Root CA"
+!define CA class "CA"
+!define SUBCA class "Sub CA"
+
+ROOTCA RootCA
+CA CA1
+CA CA2
+SUBCA SubCA1
+SUBCA SubCA2
+SUBCA SubCA3
+SUBCA SubCA4
+
+RootCA -right-> CA1 : zertifiziert
+RootCA -right-> CA2 : zertifiziert
+CA1 -right-> SubCA1 : zertifiziert
+CA1 -right-> SubCA2 : zertifiziert
+CA2 -right-> SubCA3 : zertifiziert
+CA2 -right-> SubCA4 : zertifiziert
+
+class CA1 #bold {
+    <b>Intermediate CA 1</b>
+}
+@enduml

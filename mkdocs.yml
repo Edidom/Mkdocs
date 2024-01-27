@@ -1,0 +1,9 @@
+site_name: My Docs
+plugins:
+  - search
+  - mermaid2
+nav:
+  - Startseite: index.md
+  - Zweite Seite: index2.md
+  - Dritte Seite: index3.md
+  

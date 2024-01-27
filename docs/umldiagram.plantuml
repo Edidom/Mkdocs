@@ -1,0 +1,33 @@
+@startuml
+
+package "Root CA" {
+  [RootCA] 
+}
+
+package "CAs" {
+  [CA1] 
+  [CA2] 
+  [CA3] 
+}
+
+package "Sub CAs" {
+  [SubCA1] 
+  [SubCA2] 
+  [SubCA3] 
+  [SubCA4] 
+  [SubCA5] 
+  [SubCA6]
+}
+
+[RootCA] -down-> [CA1] : zertifiziert
+[RootCA] -down-> [CA2] : zertifiziert
+[RootCA] -down-> [CA3] : zertifiziert
+[CA1] -down-> [SubCA1] : zertifiziert
+[CA1] -down-> [SubCA2] : zertifiziert
+[CA2] -down-> [SubCA3] : zertifiziert
+[CA2] -down-> [SubCA4] : zertifiziert
+[CA3] -down-> [SubCA5] : zertifiziert
+[CA2] -down-> [SubCA6] : zertifiziert
+
+
+@enduml
